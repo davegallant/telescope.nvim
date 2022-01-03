@@ -846,6 +846,12 @@ actions.remove_selected_picker = function(prompt_bufnr)
   end
 end
 
+--- Delete the word before the cursor.
+---@param prompt_bufnr number: The prompt bufnr
+actions.delete_word = function(prompt_bufnr)
+  vim.api.nvim_input "<c-s-w>"
+end
+
 --- Display the keymaps of registered actions similar to which-key.nvim.<br>
 --- - Notes:
 ---   - The defaults can be overridden via |action_generate.which_key|.
